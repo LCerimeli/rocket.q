@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+html {
+  --hue: 216.5;
+  --hue-red: 350;
+
+  --blue: hsl(var(--hue), 100%, 60.2%);
+  --dark-blue: hsl(236.4, 71.7%, 18%);
+  --light-blue: hsl(var(--hue), 100%, 93.9%);
+  --white: hsl(0, 0%, 98%);
+  --red: hsl(350.1, 78.6%, 57.8%);
+  --background: hsl(225, 100%, 99.2%);
+  --overlay: hsl(var(--hue), 61.9%, 4.1%);
+  --icons-details: hsl(var(--hue), 18.4%, 70.2%);
+
+  --grey-dark: hsl(var(--hue), 21.4%, 38.4%);
+  --grey-medium: hsl(var(--hue), 20.5%, 85.7%);
+  --grey-light: hsl(var(--hue), 30%, 92.2%);
+  --grey-blue: hsl(var(--hue), 30.6%, 71.8%);
+
+  --hover-blue: hsl(200, 100%, 50%);
+  --hover-red: hsl(var(--hue-red), 79.1%, 60.6%);
+  --hover-grey: hsl(var(--hue), 15.4%, 59.2%);
+
+  /* 1 rem = 16px (User Agent) = 100% (User Agent)*/
+  font-size: 62.5% /* Now 1rem = 10xp */;
+}
+
+body {
+  height: 100vh;
+  background: var(--background);
+}
+
+body,
+button,
+input,
+textarea {
+  /* intervalo de tamanho */
+  font-size: clamp(14px, 1.6rem, 2vw);
+
+  font-family: 'Open Sans', sans-serif;
+}
+
+.content {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Code for making .sr-only objects invisible but still detectable by screen readers and search engines */
+.sr-only {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width:0;
+}
+
+/* input and buttons */
+input, button, .button {
+  height: 5rem;
+  border-radius: .8rem;
+}
+
+button, .button {
+  font-family: 'Poppins';
+  font-weight: 500;
+  line-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--blue);
+  color: var(--white);
+  cursor: pointer;
+  transition: .25s;
+}
+
+button:hover, .button:hover {
+  background: var(--hover-blue);
+}
+
+button > img
+.button > img {
+  margin-right: 1rem;
+  width: 2rem;
+}
+
+button.outlined,
+.button.outlined {
+  background: var(--white);
+  color: var(--blue);
+  border: .2rem solid;
+}
+
+.content header {
+  width: 80%;
+  margin: 3.57rem auto
+}
+
+.content header img {
+  width: 16.7rem;
+}
