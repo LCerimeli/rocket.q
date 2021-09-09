@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 
-html {
+:root {
   --hue: 216.5;
   --hue-red: 350;
 
@@ -17,12 +17,12 @@ html {
   --red: hsl(350.1, 78.6%, 57.8%);
   --background: hsl(225, 100%, 99.2%);
   --overlay: hsl(var(--hue), 61.9%, 4.1%);
-  --icons-details: hsl(var(--hue), 18.4%, 70.2%);
+  --icons-details: hsl(var(--hue), 18.4%, 60%);
 
   --grey-dark: hsl(var(--hue), 21.4%, 38.4%);
   --grey-medium: hsl(var(--hue), 20.5%, 85.7%);
   --grey-light: hsl(var(--hue), 30%, 92.2%);
-  --grey-blue: hsl(var(--hue), 30.6%, 71.8%);
+  --grey-blue: hsl(var(--hue), 30.6%, 60%);
 
   --hover-blue: hsl(200, 100%, 50%);
   --hover-red: hsl(var(--hue-red), 79.1%, 60.6%);
@@ -33,6 +33,7 @@ html {
 }
 
 body {
+  display: flex;
   height: 100vh;
   background: var(--background);
 }
@@ -62,16 +63,19 @@ textarea {
   overflow: hidden;
   clip-path: rect(0, 0, 0, 0);
   white-space: nowrap;
-  border-width:0;
+  border-width: 0;
 }
 
 /* input and buttons */
-input, button, .button {
+input,
+button,
+.button {
   height: 5rem;
-  border-radius: .8rem;
+  border-radius: 0.8rem;
 }
 
-button, .button {
+button,
+.button {
   font-family: 'Poppins';
   font-weight: 500;
   line-height: 0;
@@ -81,15 +85,15 @@ button, .button {
   background: var(--blue);
   color: var(--white);
   cursor: pointer;
-  transition: .25s;
+  transition: 0.25s;
 }
 
-button:hover, .button:hover {
+button:hover,
+.button:hover {
   background: var(--hover-blue);
 }
 
-button > img
-.button > img {
+button > img .button > img {
   margin-right: 1rem;
   width: 2rem;
 }
@@ -98,12 +102,12 @@ button.outlined,
 .button.outlined {
   background: var(--white);
   color: var(--blue);
-  border: .2rem solid;
+  border: 0.2rem solid;
 }
 
 .content header {
   width: 80%;
-  margin: 3.57rem auto
+  margin: 3.57rem auto;
 }
 
 .content header img {
