@@ -20,7 +20,7 @@
   --icons-details: hsl(var(--hue), 18.4%, 60%);
 
   --grey-dark: hsl(var(--hue), 21.4%, 38.4%);
-  --grey-medium: hsl(var(--hue), 20.5%, 85.7%);
+  --grey-medium: hsla(var(--hue), 22%, 38%, 0.1);
   --grey-light: hsl(var(--hue), 30%, 92.2%);
   --grey-blue: hsl(var(--hue), 30.6%, 60%);
 
@@ -93,7 +93,8 @@ button:hover,
   background: var(--hover-blue);
 }
 
-button > img .button > img {
+button > img,
+.button > img {
   margin-right: 1rem;
   width: 2rem;
 }
@@ -105,6 +106,19 @@ button.outlined,
   border: 0.2rem solid;
 }
 
+button.red,
+.button.red {
+  background: var(--red);
+  color: var(--white);
+}
+
+button.grey,
+.button.grey {
+  background: var(--grey-light);
+  color: var(--grey-dark);
+}
+
+/* Header */
 .content header {
   width: 80%;
   margin: 3.57rem auto;
