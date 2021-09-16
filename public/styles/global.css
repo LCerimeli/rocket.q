@@ -32,6 +32,13 @@
   font-size: 62.5% /* Now 1rem = 10xp */;
 }
 
+/* Esconde as setinhas do input */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 body {
   display: flex;
   height: 100vh;
@@ -91,6 +98,13 @@ button,
 button:hover,
 .button:hover {
   background: var(--hover-blue);
+  box-shadow: 0.1rem 0.1rem 0.2rem var(--grey-blue);
+}
+
+button:active,
+.button:active {
+  transform: translate(0.1rem, 0.1rem);
+  box-shadow: none;
 }
 
 button > img,

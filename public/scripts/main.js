@@ -5,8 +5,24 @@ const modal = Modal()
 const modalTitle = document.querySelector('.modal h2')
 const modalDescription = document.querySelector('.modal p')
 const modalButton = document.querySelector('.modal button')
-
 const checkButton = document.querySelectorAll('.actions a.check')
+const copyButton = document.querySelector('#room-id.button.outlined')
+
+function copy() {
+  const textarea = document.createElement('textarea')
+  textarea.setAttribute('readonly', '')
+  textarea.style.position = 'absolute'
+  textarea.style.opacity = '0'
+  textarea.value = (copyButton.innerText).substring(1) 
+  document.body.appendChild(textarea)
+  textarea.select()
+  document.execCommand('copy')
+  document.body.removeChild(textarea)
+}
+
+copyButton.addEventListener('click', () => {
+  copy()
+})
 
 function handleClick(event, check = true) {
   event.preventDefault()
